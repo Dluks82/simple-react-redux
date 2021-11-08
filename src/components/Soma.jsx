@@ -1,3 +1,4 @@
+import { connect } from "react-redux";
 import Card from "./Card";
 
 const Soma = (props) => {
@@ -14,4 +15,11 @@ const Soma = (props) => {
   );
 };
 
-export default Soma;
+const mapStateToProps = (state) => {
+  return {
+    min: state.numbers.min,
+    max: state.numbers.max,
+  };
+};
+
+export default connect(mapStateToProps)(Soma);
