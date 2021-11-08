@@ -12,6 +12,8 @@ const Interval = (props) => {
         <input
           type="number"
           value={min}
+          min={0}
+          max={max - 1}
           onChange={(e) => props.onMinChange(+e.target.value)}
         />
         <span>
@@ -20,6 +22,7 @@ const Interval = (props) => {
         <input
           type="number"
           value={max}
+          min={min + 1}
           onChange={(e) => props.onMaxChange(+e.target.value)}
         />
       </div>
