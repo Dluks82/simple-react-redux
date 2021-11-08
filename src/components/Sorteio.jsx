@@ -4,13 +4,13 @@ import Card from "./Card";
 const Sorteio = (props) => {
   const { min, max } = props;
 
-  const sorteio = parseInt(Math.random() * (max - min) + min);
+  const random = parseInt(Math.random() * (max + 1 - min)) + min;
   return (
     <Card title="Sorteio number" purple>
       <div>
         <span>
           <span>Result: </span>
-          <strong>{sorteio}</strong>
+          <strong>{random}</strong>
         </span>
       </div>
     </Card>
